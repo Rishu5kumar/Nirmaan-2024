@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            background: url('bg.jpg') center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #000;
+            padding-top: 60px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-section {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .home-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .home-section p {
+            font-size: 1.2em;
+        }
+
+        .article-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px 20px;
+            margin-top: 20px;
+        }
+
+        .article-section h3 {
+            color: #333;
+        }
+
+        .article-section p {
+            color: #555;
+        }
+        .card-body{
+            background-color: rgba(101, 102, 104, 0.8);
+        }
+        .text-center{
+            color: gray;
+        }
+        .fade-in-text {
+            font-family: Arial;
+            font-size: 60px;
+            animation: fadeIn 5s;
+            -webkit-animation: fadeIn 5s;
+            -moz-animation: fadeIn 5s;
+            -o-animation: fadeIn 5s;
+            -ms-animation: fadeIn 5s;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-moz-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-o-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        header {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        }
+
+        .logo {
+            margin-left: 45px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-right: auto;
+        }
+
+        nav li {
+            padding-top: 10px;
+            margin-right: 35px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: "Poppins-bold",Helvetica;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #002fff;
+        }
+        #reportDump, #wasteCategories {
+            margin-top: 40px;
+        }
+    </style>
+    <title>Dump Management - Home</title>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py    -3">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+    <nav>
+        <!-- Add navigation links as needed -->
+        <ul>
+            <!--<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>-->
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+    <section id="home-section" class="home-section container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="fade-in-text">Welcome to DumpCrows</h2>
+                <p>Dump Smart, Dump Green: Your Waste, Our Responsibility.</p>
+            </div>
+        </div>
+    </section>
+    <section id="reportDump" class="container mt-4">
+        <h2 style="text-align: center;">Report Your Dump</h2>
+        <p style="text-align: center;">Do you have waste that needs to be disposed of responsibly? Report your dump with us, and we'll take care of the collection process for you. It's a simple and efficient way to contribute to a cleaner environment.</p>
+        <p style="text-align: center;">Our process is designed to make it easy for dump producers to inform us about their waste. Simply fill out the form with details about the type and location of the dump, and we'll handle the rest.</p>
+        </section>
+    <section id="wasteCategories" class="container mt-4">
+    <section id="article-section" class="article-section container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <!-- <img src="1.jpg" class="card-img-top" alt="Construction Waste"> -->
+                    <video height="400px" controls="controls" class="card-img-top" name="Construction Waste" autoplay loop muted>
+                        <source src="a.mov">
+                      </video>
+                    <div class="card-body">
+                        <h3 class="card-title">Construction Waste</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img height="400px" src="4.jpg" class="card-img-top" alt="Article 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Dumping of Waste</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2024 Dump Management Platform. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

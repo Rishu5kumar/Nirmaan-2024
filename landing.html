@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            background: url('bg.jpg') center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #000;
+            padding-top: 60px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            color: #000 !important;
+        }
+        header {
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-right: auto;
+        }
+
+        nav li {
+            padding-top: 10px;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: "Poppins-bold",Helvetica;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #002fff;
+        }
+
+        .jumbotron {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .jumbotron h1 {
+            font-size: 36px;
+        }
+
+        .jumbotron p {
+            font-size: 18px;
+        }
+
+        .jumbotron a {
+            font-size: 20px;
+        }
+
+        #reportDump, #wasteCategories {
+            margin-top: 40px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            text-align: center;
+        }
+        .display-4{
+            text-align: center;
+        }
+        .lead{
+            text-align: center;
+        }
+        /* h1{
+            font-size: 2.5em;
+        } */
+    </style>
+
+    <title>Dump Management Platform</title>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#reportDump">Report Your Dump</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Dump Management Platform</h1>
+            <p class="lead">We make waste management easy and efficient. Report your dump, and we'll take care of the rest!</p>
+            <hr class="my-4">
+            <p style="text-align: center;">We specialize in the collection and responsible disposal of various types of waste, including Construction and Demolition waste, E-waste, and Agricultural waste.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#reportDump" role="button">Report Your Dump</a>
+            </p>
+        </div>
+    </section>
+    <section id="reportDump" class="container mt-4">
+        <h2 style="text-align: center;">Report Your Dump</h2>
+        <p style="text-align: center;">Do you find yourself with waste that requires responsible disposal? Partner with us to streamline the collection process, ensuring a cleaner environment through our efficient services.</p>
+        <p style="text-align: center;">We've simplified the reporting process for waste producers. By completing a straightforward form, you can provide us with essential details about the dump's type and location, leaving the rest to us. Let us manage the collection, making your contribution to environmental cleanliness hassle-free.</p>
+    </section>
+    <section id="wasteCategories" class="container mt-4">
+        <h2 style="text-align: center;">Waste Categories We Manage</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Construction and Demolition Waste</h3>
+                        <a href="con_register.html">Register for Construction and Demolition Waste</a>
+                        <p class="card-text">We specialize in the collection and disposal of construction and demolition waste. Whether it's debris from a construction site or the result of a demolition project, we've got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">E-waste</h3>
+                        <a href="e_register.html">Register for E-watse</a>
+                        <p class="card-text">Electronics waste, or e-waste, poses unique challenges for disposal. We ensure the proper collection and recycling of electronic devices to minimize environmental impact and promote sustainability.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Agricultural Waste</h3>
+                        <a href="agri_register.html">Register for Agricultural waste</a></li>
+                        <p class="card-text">Agricultural waste, such as crop residues and organic matter, is an essential category in waste management. We provide solutions for the responsible disposal of agricultural waste to support sustainable farming practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2024 Dump Management Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+``

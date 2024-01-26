@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3;url=home.html">
+    <title>Logout - Dump Management</title>
+    <style>
+        body {
+            background: url('bg.jpg') center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #000;
+            padding-top: 60px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Logout Successful</h2>
+        <p>You have been successfully logged out. Redirecting to the home page...</p>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = "home.html";
+        }, 3000); // Redirect after 3 seconds
+    </script>
+</body>
+</html>

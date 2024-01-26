@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Integration</title>
+    <style>
+        #chat-container {
+            max-width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: scroll;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Chatbot Integration</h1>
+    <div id="chat-container"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        // Replace YOUR_DIALOGFLOW_API_KEY with your actual Dialogflow API key
+        const API_KEY = 'YOUR_DIALOGFLOW_API_KEY';
+        const API_ENDPOINT = `https://api.dialogflow.com/v1/query?v=20150910&lang=en&sessionId=12345&query=`;
+
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            displayMessage('User: ' + userInput);
+
+            // Make a request to Dialogflow API
+            fetch(API_ENDPOINT + userInput, {
+                headers: {
+                    'Authorization': `Bearer ${API_KEY}`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botResponse = data.result.fulfillment.speech;
+                displayMessage('Chatbot: ' + botResponse);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                displayMessage('Error occurred. Please try again.');
+            });
+        }
+
+        function displayMessage(message) {
+            const chatContainer = document.getElementById('chat-container');
+            const newMessage = document.createElement('div');
+            newMessage.textContent = message;
+            chatContainer.appendChild(newMessage);
+
+            // Scroll to the bottom of the chat container
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>
